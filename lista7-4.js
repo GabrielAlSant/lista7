@@ -2,6 +2,9 @@ class ItemBiblioteca{
      #titulo
      #dataLancamento
      constructor(titulo, dataLancamento){
+        if (this.constructor === ItemBiblioteca){
+            throw new Error("Classe Pai")
+        }
         this.#titulo = titulo
         this.#dataLancamento = dataLancamento
      }
