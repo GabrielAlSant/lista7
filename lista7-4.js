@@ -21,8 +21,8 @@ class DVD extends ItemBiblioteca{
         this.editora = editora  
         this.autor = autor
     }
-    obterInformacoes_DVD(){
-     return this.obterInformacoes()+ ` Editora: ${this.editora}; Autor: ${this.autor}`
+    obterInformacoes(){
+     return super.obterInformacoes()+ ` Editora: ${this.editora}; Autor: ${this.autor}`
     }
 }
 
@@ -32,16 +32,16 @@ class Livro extends ItemBiblioteca{
         this.produtora = produtora  
         this.duracao = duracao
     }
-    obterInformacoes_Livro(){
-     return this.obterInformacoes()+ ` Produtora: ${this.produtora}; Duração: ${this.duracao}`
+    obterInformacoes(){
+     return super.obterInformacoes()+ ` Produtora: ${this.produtora}; Duração: ${this.duracao}`
     }
 }
 
 
 const dvd = new DVD("a", "12/10/2004", "bka", "BAKAAA")
 
-console.log(dvd.obterInformacoes_DVD())
+console.log(dvd.obterInformacoes())
 
 const livro = new Livro("a", "12/10/2004", "bka", "128 min")
 
-console.log(livro.obterInformacoes_Livro())
+console.log(livro.obterInformacoes())
